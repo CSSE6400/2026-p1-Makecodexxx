@@ -1,0 +1,31 @@
+### 变量设置（PyCharm 会自动识别 {{baseUrl}}）
+@baseUrl = http://localhost:6400
+
+### 1. 健康检查 [cite: 152, 452-453]
+GET {{baseUrl}}/api/v1/health
+
+### 2. 获取所有 Todo 列表 [cite: 454-455]
+GET {{baseUrl}}/api/v1/todos
+
+### 3. 获取特定 ID 的 Todo [cite: 456-457]
+GET {{baseUrl}}/api/v1/todos/1
+
+### 4. 创建一个新的 Todo [cite: 458-468]
+POST {{baseUrl}}/api/v1/todos
+Content-Type: application/json
+
+{
+  "title": "An example Todo",
+  "description": "This is an example todo"
+}
+
+### 5. 更新现有的 Todo [cite: 469-473]
+PUT {{baseUrl}}/api/v1/todos/1
+Content-Type: application/json
+
+{
+  "title": "updated title"
+}
+
+### 6. 删除一个 Todo [cite: 474-475]
+DELETE {{baseUrl}}/api/v1/todos/1
